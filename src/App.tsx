@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+// src/App.tsx
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LoadingScreen from './components/LoadingScreen';
-import Footer from './components/Footer';
+import { Footer } from './components/Footer'; // Change to named import
 import HomePage from './pages/HomePage';
 import Blog from './pages/Blog';
 import PrivacyPolicy from './pages/PrivacyPolicy';
@@ -10,8 +11,7 @@ import TermsOfUse from './pages/TermsOfUse';
 const App: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
 
-  React.useEffect(() => {
-    // Simulate loading time
+  useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 2000);
