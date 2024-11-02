@@ -2,7 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Hexagon, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 
-const SocialLink: React.FC<{ href: string; icon: React.ReactNode }> = ({ href, icon }) => (
+interface SocialLinkProps {
+  href: string;
+  icon: React.ReactNode;
+}
+
+const SocialLink: React.FC<SocialLinkProps> = ({ href, icon }) => (
   <a
     href={href}
     target="_blank"
@@ -13,7 +18,7 @@ const SocialLink: React.FC<{ href: string; icon: React.ReactNode }> = ({ href, i
   </a>
 );
 
-const Footer: React.FC = () => {
+const Footer = () => {
   return (
     <footer className="bg-space-gray py-16">
       <div className="container mx-auto px-6">
