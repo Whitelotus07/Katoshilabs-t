@@ -1,3 +1,4 @@
+// src/components/Footer.tsx
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Hexagon, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
@@ -18,7 +19,7 @@ const SocialLink: React.FC<SocialLinkProps> = ({ href, icon }) => (
   </a>
 );
 
-const Footer = () => {
+export const Footer: React.FC = () => {
   return (
     <footer className="bg-space-gray py-16">
       <div className="container mx-auto px-6">
@@ -86,5 +87,3 @@ const Footer = () => {
     </footer>
   );
 };
-
-export default Footer;
