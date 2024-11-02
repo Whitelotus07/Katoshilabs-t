@@ -1,5 +1,5 @@
 import React from 'react';
-import { Music, Share2, Brain, Waveform, Shield, Zap } from 'lucide-react';
+import { Music, Share2, Brain, Activity, Shield, Zap } from 'lucide-react';
 
 interface FeatureCardProps {
   icon: React.ReactNode;
@@ -23,7 +23,7 @@ const ProductSection: React.FC = () => {
       description: "Advanced neural networks create unique, professional-quality music across multiple genres and styles."
     },
     {
-      icon: <Waveform size={32} />,
+      icon: <Activity size={32} />,
       title: "Real-time Customization",
       description: "Adjust tempo, mood, instruments, and structure in real-time with intuitive controls."
     },
@@ -88,7 +88,6 @@ const ProductSection: React.FC = () => {
               </button>
             </div>
             <div className="relative">
-              {/* Replace with actual product image or visualization */}
               <div className="aspect-video bg-deep-space rounded-lg overflow-hidden">
                 <div className="w-full h-full bg-gradient-to-br from-neon-blue/20 to-deep-space animate-pulse">
                   {/* Add product screenshot or demo visualization here */}
