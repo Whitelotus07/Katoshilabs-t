@@ -3,6 +3,13 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Hexagon } from 'lucide-react';
 
+const Logo: React.FC = () => (
+  <Link to="/" className="flex items-center space-x-2">
+    <Hexagon size={32} className="text-neon-blue" />
+    <span className="text-xl font-bold text-white">Katoshi Labs</span>
+  </Link>
+);
+
 const NavLink: React.FC<{ to: string; children: React.ReactNode }> = ({ to, children }) => {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (to.startsWith('/#')) {
