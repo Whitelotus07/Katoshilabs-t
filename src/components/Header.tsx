@@ -1,21 +1,29 @@
+// src/components/Header.tsx
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Hexagon } from 'lucide-react';
 
-const NavLink: React.FC<{ to: string; children: React.ReactNode }> = ({ to, children }) => (
-  <Link to={to} className="text-white hover:text-neon-blue transition-colors duration-300">
-    {children}
-  </Link>
-);
+const NavLink: React.FC<{ to: string; children: React.ReactNode }> = ({ to, children }) => {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (to.startsWith('/#')) {
+      e.preventDefault();
+      const element = document.querySelector(to.substring(1));
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
 
-const Logo: React.FC = () => (
-  <Link to="/" className="flex items-center space-x-2">
-    <Hexagon size={32} className="text-white animate-spin-slow" />
-    <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
-      Katoshi Labs
-    </span>
-  </Link>
-);
+  return (
+    <Link 
+      to={to} 
+      onClick={handleClick}
+      className="text-white hover:text-neon-blue transition-colors duration-300"
+    >
+      {children}
+    </Link>
+  );
+};
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,6 +40,7 @@ const Header: React.FC = () => {
           <NavLink to="/#contact">Contact</NavLink>
           <NavLink to="/blog">Blog</NavLink>
         </div>
+        {/* Mobile menu button */}
         <button
           className="md:hidden text-white"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -39,8 +48,9 @@ const Header: React.FC = () => {
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </nav>
+      {/* Mobile menu */}
       {isMenuOpen && (
-        <div className="md:hidden mt-4 space-y-4">
+        <div className="md:hidden mt-4 flex flex-col space-y-4">
           <NavLink to="/">Home</NavLink>
           <NavLink to="/#products">Products</NavLink>
           <NavLink to="/#services">Services</NavLink>
