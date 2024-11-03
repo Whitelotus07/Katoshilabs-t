@@ -1,3 +1,4 @@
+// src/components/ContactSection.tsx
 import React from 'react';
 import { Mail, Phone, MapPin } from 'lucide-react';
 
@@ -14,14 +15,14 @@ const ContactSection: React.FC = () => {
           <div className="bg-space-gray p-6 rounded-lg text-center">
             <Mail size={32} className="text-neon-blue mx-auto mb-4" />
             <h3 className="text-white font-semibold mb-2">Email</h3>
-            <a href="mailto:contact@katoshilabs.com" className="text-gray-300 hover:text-neon-blue transition-colors">
+            <a href="mailto:katoshilabs@gmail.com" className="text-gray-300 hover:text-neon-blue transition-colors">
               katoshilabs@gmail.com
             </a>
           </div>
           <div className="bg-space-gray p-6 rounded-lg text-center">
             <Phone size={32} className="text-neon-blue mx-auto mb-4" />
             <h3 className="text-white font-semibold mb-2">Phone</h3>
-            <a href="tel:+1234567890" className="text-gray-300 hover:text-neon-blue transition-colors">
+            <a href="tel:+2349050409056" className="text-gray-300 hover:text-neon-blue transition-colors">
               +2349050409056
             </a>
           </div>
@@ -45,4 +46,4 @@ const ContactSection: React.FC = () => {
   );
 };
 
-export default ContactSection;
+export { ContactSection };
