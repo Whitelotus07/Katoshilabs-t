@@ -15,26 +15,26 @@ const ContactSection: React.FC = () => {
             <Mail size={32} className="text-neon-blue mx-auto mb-4" />
             <h3 className="text-white font-semibold mb-2">Email</h3>
             <a href="mailto:contact@katoshilabs.com" className="text-gray-300 hover:text-neon-blue transition-colors">
-              contact@katoshilabs.com
+              katoshilabs@gmail.com
             </a>
           </div>
           <div className="bg-space-gray p-6 rounded-lg text-center">
             <Phone size={32} className="text-neon-blue mx-auto mb-4" />
             <h3 className="text-white font-semibold mb-2">Phone</h3>
             <a href="tel:+1234567890" className="text-gray-300 hover:text-neon-blue transition-colors">
-              +1 (234) 567-890
+              +2349050409056
             </a>
           </div>
           <div className="bg-space-gray p-6 rounded-lg text-center">
             <MapPin size={32} className="text-neon-blue mx-auto mb-4" />
             <h3 className="text-white font-semibold mb-2">Location</h3>
-            <p className="text-gray-300">San Francisco, CA</p>
+            <p className="text-gray-300"> Nsikak Eduok, Uyo</p>
           </div>
         </div>
 
         <div className="text-center">
           <a
-            href="mailto:contact@katoshilabs.com"
+            href="mailto:katoshilabs@gmail.com"
             className="bg-neon-blue text-deep-space px-8 py-3 rounded-full font-semibold hover:bg-white transition-colors duration-300 inline-block"
           >
             Contact Us
