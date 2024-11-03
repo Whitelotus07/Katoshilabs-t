@@ -3,6 +3,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Hexagon, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 
+const Logo: React.FC = () => (
+  <Link to="/" className="flex items-center space-x-2">
+    <Hexagon size={32} className="text-neon-blue animate-spin-slow" />
+    <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-neon-blue to-white">Katoshi Labs</span>
+  </Link>
+);
+
 interface SocialLinkProps {
   href: string;
   icon: React.ReactNode;
@@ -26,11 +33,8 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Logo and Copyright */}
           <div className="flex flex-col items-center md:items-start">
-            <div className="flex items-center space-x-2 mb-4">
-              <Hexagon size={24} className="text-neon-blue" />
-              <span className="text-xl font-bold text-white">Katoshi Labs</span>
-            </div>
-            <p className="text-gray-400 text-sm text-center md:text-left">
+            <Logo />
+            <p className="text-gray-400 text-sm text-center md:text-left mt-4">
               Innovating the future of software development
             </p>
           </div>
@@ -39,10 +43,10 @@ const Footer: React.FC = () => {
           <div className="flex flex-col items-center md:items-start">
             <h3 className="text-white font-semibold text-lg mb-4">Quick Links</h3>
             <div className="flex flex-col space-y-2">
-              <Link to="/terms" className="text-gray-300 hover:text-neon-blue transition-colors">
+              <Link to="/terms-of-use" className="text-gray-300 hover:text-neon-blue transition-colors">
                 Terms of Use
               </Link>
-              <Link to="/privacy" className="text-gray-300 hover:text-neon-blue transition-colors">
+              <Link to="/privacy-policy" className="text-gray-300 hover:text-neon-blue transition-colors">
                 Privacy Policy
               </Link>
               <Link to="/blog" className="text-gray-300 hover:text-neon-blue transition-colors">
