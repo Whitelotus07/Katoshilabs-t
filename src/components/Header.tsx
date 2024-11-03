@@ -5,8 +5,8 @@ import { Menu, X, Hexagon } from 'lucide-react';
 
 const Logo: React.FC = () => (
   <Link to="/" className="flex items-center space-x-2">
-    <Hexagon size={32} className="text-neon-blue" />
-    <span className="text-xl font-bold text-white">Katoshi Labs</span>
+    <Hexagon size={32} className="text-neon-blue animate-spin-slow" />
+    <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-neon-blue to-white">Katoshi Labs</span>
   </Link>
 );
 
@@ -47,7 +47,6 @@ const Header: React.FC = () => {
           <NavLink to="/#contact">Contact</NavLink>
           <NavLink to="/blog">Blog</NavLink>
         </div>
-        {/* Mobile menu button */}
         <button
           className="md:hidden text-white"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -55,7 +54,6 @@ const Header: React.FC = () => {
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </nav>
-      {/* Mobile menu */}
       {isMenuOpen && (
         <div className="md:hidden mt-4 flex flex-col space-y-4">
           <NavLink to="/">Home</NavLink>
