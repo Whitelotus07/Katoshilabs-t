@@ -9,7 +9,7 @@ const LoadingScreen: React.FC = () => {
         <div className="flex items-center justify-center mb-4">
           <Hexagon 
             size={64} 
-            className="text-neon-blue animate-spin-slow" 
+            className="text-neon-blue animate-spin-fast" 
           />
         </div>
         <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-neon-blue via-blue-400 to-white animate-pulse">
