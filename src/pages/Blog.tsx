@@ -1,5 +1,7 @@
+// src/pages/Blog.tsx
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import BinaryBackground from '../components/BinaryBackground';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 
@@ -35,55 +37,60 @@ const blogPosts = [
 
 const Blog: React.FC = () => {
   return (
-    <div className="flex flex-col min-h-screen bg-deep-space">
-      <Header />
-      <div className="container mx-auto px-6 py-24 flex-grow">
-        <header className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6 animate-text-glow">
-            Insights & Innovation
-          </h1>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Explore the latest trends, technologies, and insights in AI, music technology, and software development.
-          </p>
-        </header>
+    <div className="flex flex-col min-h-screen relative">
+      <BinaryBackground />
+      <div className="relative z-10 flex flex-col min-h-screen">
+        <Header />
+        <main className="flex-grow">
+          <div className="container mx-auto px-6 py-24">
+            <header className="text-center mb-16">
+              <h1 className="text-5xl font-bold text-white mb-6 animate-text-glow">
+                Insights & Innovation
+              </h1>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Explore the latest trends, technologies, and insights in AI, music technology, and software development.
+              </p>
+            </header>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {blogPosts.map((post) => (
-            <article
-              key={post.id}
-              className="bg-space-gray rounded-lg overflow-hidden shadow-neon hover:transform hover:scale-105 transition-all duration-300"
-            >
-              <div className="relative">
-                <img
-                  src={post.imageUrl}
-                  alt={post.title}
-                  className="w-full h-56 object-cover"
-                />
-                <span className="absolute top-4 left-4 bg-neon-blue text-deep-space px-3 py-1 rounded-full text-sm font-semibold">
-                  {post.category}
-                </span>
-              </div>
-              <div className="p-8">
-                <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
-                  <time>{post.date}</time>
-                  <span>{post.readTime}</span>
-                </div>
-                <h2 className="text-2xl font-semibold text-white mb-4 leading-tight">
-                  {post.title}
-                </h2>
-                <p className="text-gray-300 mb-6 line-clamp-3">
-                  {post.excerpt}
-                </p>
-                <button className="group flex items-center text-neon-blue hover:text-white transition-colors">
-                  Read More 
-                  <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
-                </button>
-              </div>
-            </article>
-          ))}
-        </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+              {blogPosts.map((post) => (
+                <article
+                  key={post.id}
+                  className="bg-space-gray rounded-lg overflow-hidden shadow-neon hover:transform hover:scale-105 transition-all duration-300"
+                >
+                  <div className="relative">
+                    <img
+                      src={post.imageUrl}
+                      alt={post.title}
+                      className="w-full h-56 object-cover"
+                    />
+                    <span className="absolute top-4 left-4 bg-neon-blue text-deep-space px-3 py-1 rounded-full text-sm font-semibold">
+                      {post.category}
+                    </span>
+                  </div>
+                  <div className="p-8">
+                    <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
+                      <time>{post.date}</time>
+                      <span>{post.readTime}</span>
+                    </div>
+                    <h2 className="text-2xl font-semibold text-white mb-4 leading-tight">
+                      {post.title}
+                    </h2>
+                    <p className="text-gray-300 mb-6 line-clamp-3">
+                      {post.excerpt}
+                    </p>
+                    <button className="group flex items-center text-neon-blue hover:text-white transition-colors">
+                      Read More 
+                      <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                    </button>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </main>
+        <Footer />
       </div>
-      <Footer />
     </div>
   );
 };
