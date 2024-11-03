@@ -6,7 +6,7 @@ import { Hexagon, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 const Logo: React.FC = () => (
   <Link to="/" className="flex items-center space-x-2">
     <Hexagon size={32} className="text-neon-blue animate-spin-slow" />
-    <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-neon-blue to-white">Katoshi Labs</span>
+    <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-neon-blue via-blue-500 to-white">Katoshi Labs</span>
   </Link>
 );
 
