@@ -1,3 +1,4 @@
+// src/components/ServicesSection.tsx
 import React from 'react';
 import { Code, Cpu, Globe, Cloud, Shield, Smartphone } from 'lucide-react';
 
@@ -113,4 +114,4 @@ const ServicesSection: React.FC = () => {
   );
 };
 
-export default ServicesSection;
+export { ServicesSection };
