@@ -1,3 +1,4 @@
+// src/components/BinaryBackground.tsx
 import React, { useEffect } from 'react';
 
 const BinaryBackground: React.FC = () => {
@@ -42,7 +43,7 @@ const BinaryBackground: React.FC = () => {
     return () => clearInterval(interval);
   }, []);
 
-  return <canvas id="binary-canvas" className="fixed top-0 left-0 w-full h-full pointer-events-none z-0" />;
+  return <canvas id="binary-canvas" className="fixed top -0 left-0 w-full h-full" />;
 };
 
 export default BinaryBackground;
