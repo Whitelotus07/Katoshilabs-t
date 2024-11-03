@@ -1,3 +1,4 @@
+// src/components/HeroSection.tsx
 import React from 'react';
 
 const HeroSection: React.FC = () => {
@@ -19,5 +20,4 @@ const HeroSection: React.FC = () => {
   );
 };
 
-// Add this named export
 export { HeroSection };
