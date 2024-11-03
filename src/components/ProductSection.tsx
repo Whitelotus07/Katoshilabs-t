@@ -1,3 +1,4 @@
+// src/components/ProductSection.tsx
 import React from 'react';
 import { Music, Share2, Brain, Activity, Shield, Zap } from 'lucide-react';
 
@@ -123,4 +124,4 @@ const ProductSection: React.FC = () => {
   );
 };
 
-export default ProductSection;
+export { ProductSection };
