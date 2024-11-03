@@ -19,4 +19,5 @@ const HeroSection: React.FC = () => {
   );
 };
 
-export default HeroSection;
+// Add this named export
+export { HeroSection };
