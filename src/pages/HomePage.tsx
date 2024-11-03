@@ -13,7 +13,7 @@ const HomePage: React.FC = () => {
   return (
     <div className="flex flex-col min-h-screen relative">
       <BinaryBackground />
-      <div className="relative z-10">
+      <div className="relative z-10 flex flex-col min-h-screen">
         <Header />
         <main>
           <HeroSection />
