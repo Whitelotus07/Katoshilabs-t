@@ -1,5 +1,7 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import { Header } from '../components/Header';
+import { Footer } from '../components/Footer';
 
 const blogPosts = [
   {
@@ -33,8 +35,9 @@ const blogPosts = [
 
 const Blog: React.FC = () => {
   return (
-    <div className="min-h-screen bg-deep-space">
-      <div className="container mx-auto px-6 py-24">
+    <div className="flex flex-col min-h-screen bg-deep-space">
+      <Header />
+      <div className="container mx-auto px-6 py-24 flex-grow">
         <header className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6 animate-text-glow">
             Insights & Innovation
@@ -80,6 +83,7 @@ const Blog: React.FC = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
